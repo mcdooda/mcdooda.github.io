@@ -23,7 +23,7 @@ h1, h2, h3 {
 
 h1 {
     text-align: center;
-    margin-top: 2vh;
+    padding-top: 2vh;
 }
 
 ul {
@@ -38,6 +38,9 @@ ul li {
 
 header {
     min-height: 100vh;
+    z-index: 2;
+    position: relative;
+    background-color: #EEEEEE;
 }
 
 #links {
@@ -107,18 +110,37 @@ header {
         background-size: 100% auto;
     }
 }
+.project-content {
+	position: absolute;
+	bottom: 0;
+	width: 100%;
+}
 .project h3 {
     background: rgba(255, 255, 255, 0.85);
-    margin-top: 30vh;
     text-align: center;
     font-size: 1.6em;
     border-top: 1px solid #3377FF;
 }
-.project p {
-    padding: 1.5vh;
+.summary {
+    padding: 1.5vh 2vh;
     background: rgba(255, 255, 255, 0.85);
     border-bottom: 1px solid #FF3377;
+    text-align: justify;
 }
+
+.external-links {
+    text-align: center;
+    padding: 5vh;
+}
+.external-links a {
+    border: 1px solid #EEEEEE;
+    border-radius: 5px;
+    background: #428BCA;
+    padding: 7px;
+    color: white;
+    text-decoration: none;
+}
+
 #theguineasyndrome {
     background-image: url(../img/projects/theguineasyndrome.jpg);
 }
@@ -138,32 +160,20 @@ header {
     background-image: url(../img/projects/p-p-p-pong.png);
 }
 
-.external-links {
-    position: absolute;
-    bottom: 15vh;
-    width: 100%;
-    text-align: center;
+#top-link {
+	display: block;
+	width: 30px;
+	position: fixed;
+	top: 10px;
+	left: 10px;
+	z-index: 1;
+	outline: none;
 }
-.external-links a {
-    border: 1px solid #EEEEEE;
-    border-radius: 5px;
-    background: #428BCA;
-    padding: 7px;
-    color: white;
-    text-decoration: none;
-}
-
-nav {
-    position: fixed;
-    bottom: 0;
-    min-height: 6vh;
-    width: 100%;
-    background: rgba(255, 255, 255, 0.85);
-    display: none;
-}
-nav ul li {
-    display: block;
-    float: left;
-    width: 33%;
-    text-align: center;
+#top-link span {
+	display: block;
+	margin: 4px;
+	border-radius: 3px;
+	height: 2px;
+	background: white;
+	box-shadow: 0 0 3px 3px rgba(0, 0, 0, 0.6);
 }
