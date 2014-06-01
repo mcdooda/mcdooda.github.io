@@ -1,8 +1,26 @@
 body {
     font-family: roboto, sans-serif;
-    margin: 0;
     padding: 0;
-    background-color: #EEEEEE;
+	background: url(../img/bg.jpg) center center no-repeat;
+	background-attachment: fixed;
+    background-color: #E8E8E8;
+	width: 50%;
+	margin: auto;
+}
+@media(max-width: 1170px) {
+	body {
+		width: 60%;
+	}
+}
+@media(max-width: 970px) {
+	body {
+		width: 80%;
+	}
+}
+@media(max-width: 750px) {
+	body {
+		width: 98%;
+	}
 }
 
 a {
@@ -19,11 +37,19 @@ h1, h2, h3 {
     margin: 0;
     padding: 0;
     font-weight: lighter;
+	text-align: center;
 }
 
 h1 {
     text-align: center;
-    padding-top: 2vh;
+}
+
+h2 {
+	margin: 2%;
+}
+
+h3 {
+	font-size: 1.5em;
 }
 
 ul {
@@ -37,58 +63,16 @@ ul li {
 }
 
 header {
-    min-height: 100vh;
-    z-index: 2;
-    position: relative;
-    background-color: #EEEEEE;
-}
-
-#links {
-    margin: 3vh 0;
-    font-size: 1.1em;
-    background: #F3F3F1;
-    text-transform: uppercase;
-    overflow: auto;
-    border-top: 1px solid #DDDDDD;
-}
-#links li {
-    padding: 2vh;
-    border-bottom: 1px solid #DDDDDD;
-    display: block;
-}
-@media (orientation: landscape) {
-    #links li {
-        float: left;
-        width: 50%;
-        box-sizing: border-box;
-        -moz-box-sizing: border-box;
-    }
-    #links li:nth-child(even) {
-        border-left: 1px solid #DDDDDD;
-    }
-}
-#links a {
-    display: block;
-    letter-spacing: 0.5px;
-    white-space: nowrap;
-    overflow: hidden;
+	
 }
 
 #social {
-    font-size: 1.2em;
+    text-align: center;
+	margin-bottom: 3%;
 }
-
-#social strong, #social a {
-    display: inline-block;
-    width: 48%;
-    margin-right: 2%;
-    color: #FF3377;
-    text-decoration: none;
-}
-#social strong {
-    text-align: right;
-    font-family: Avantgarde, sans-serif;
-    color: #666666;
+#social img {
+	display: inline-block;
+	height: 1em;
 }
 
 #projects {
@@ -96,84 +80,57 @@ header {
 }
 
 .project {
-    min-height: 96vh;
-    background: #EEEEEE;
-    display: block;
-    margin: 0;
-    padding: 2vh 0;
-    position: relative;
-    background-size: auto 100%;
-    background-position: 50% 0;
+	padding: 2%;
+	overflow: auto;
+	background: rgba(210, 210, 210, 0.5);
+	margin-bottom: 2%;
+	box-shadow: 0 0 2px #888888;
 }
-@media (orientation: landscape) {
-    .project {
-        background-size: 100% auto;
-    }
+
+.project img {
+	float: left;
+	width: 30%;
+	box-shadow: 0 0 4px #444444;
 }
-.project-content {
-	position: absolute;
-	bottom: 0;
-	width: 100%;
+@media(max-width: 750px) {
+	.project img {
+		float: none;
+		width: 50%;
+		margin: auto;
+		display: block;
+	}
 }
+
 .project h3 {
-    background: rgba(255, 255, 255, 0.85);
-    text-align: center;
-    font-size: 1.6em;
-    border-top: 1px solid #3377FF;
+    margin-left: 32%;
+	color: #3366FF;
 }
+@media(max-width: 750px) {
+	.project h3 {
+		margin-left: 0;
+		margin-top: 2%;
+	}
+}
+
 .summary {
-    padding: 1.5vh 2vh;
-    background: rgba(255, 255, 255, 0.85);
-    border-bottom: 1px solid #FF3377;
-    text-align: justify;
+	margin-left: 32%;
+	padding: 2%;
+}
+@media(max-width: 750px) {
+	.summary {
+		margin-left: 0;
+	}
 }
 
 .external-links {
     text-align: center;
-    padding: 5vh;
 }
 .external-links a {
-    border: 1px solid #EEEEEE;
     border-radius: 5px;
     background: #428BCA;
     padding: 7px;
     color: white;
     text-decoration: none;
+	display: inline-block;
 }
 
-#theguineasyndrome {
-    background-image: url(../img/projects/theguineasyndrome.jpg);
-}
-#theglobalscourge {
-    background-image: url(../img/projects/theglobalscourge.jpg);
-}
-#oceanskeeper {
-    background-image: url(../img/projects/oceanskeeper.jpg);
-}
-#oceanskeeper2 {
-    background-image: url(../img/projects/oceanskeeper2.png);
-}
-#pix {
-    background-image: url(../img/projects/pix.png);
-}
-#p-p-p-pong {
-    background-image: url(../img/projects/p-p-p-pong.png);
-}
-
-#top-link {
-	display: block;
-	width: 30px;
-	position: fixed;
-	top: 10px;
-	left: 10px;
-	z-index: 1;
-	outline: none;
-}
-#top-link span {
-	display: block;
-	margin: 4px;
-	border-radius: 3px;
-	height: 2px;
-	background: white;
-	box-shadow: 0 0 3px 3px rgba(0, 0, 0, 0.6);
-}
