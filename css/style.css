@@ -24,8 +24,11 @@ body {
 }
 
 a {
-    text-decoration: none;
+    text-decoration: underline;
     color: #3366FF;
+}
+a:hover {
+	color: #FF55AA;
 }
 
 p {
@@ -42,6 +45,31 @@ h1, h2, h3 {
 
 h1 {
     text-align: center;
+	position: relative;
+}
+h1 span {
+	display: block;
+	position: absolute;
+	top: 0;
+	right: 0;
+	width: 20%;
+	text-align: right;
+}
+@media(max-width: 320px) {
+	h1 span {
+		width: 40%;
+		margin: auto;
+		position: static;
+		text-align: center;
+	}
+}
+h1 span a img {
+	width: 14%;
+}
+@media(max-width: 1170px) {
+	h1 span a img {
+		width: 18%;
+	}
 }
 
 h2 {
@@ -50,6 +78,10 @@ h2 {
 
 h3 {
 	font-size: 1.5em;
+}
+h3 em {
+	font-style: normal;
+	font-size: 1.1em;
 }
 
 ul {
@@ -66,15 +98,6 @@ header {
 	
 }
 
-#social {
-    text-align: center;
-	margin-bottom: 3%;
-}
-#social img {
-	display: inline-block;
-	height: 1em;
-}
-
 #projects {
 
 }
@@ -82,7 +105,7 @@ header {
 .project {
 	padding: 2%;
 	overflow: auto;
-	background: rgba(210, 210, 210, 0.5);
+	background: rgba(225, 225, 225, 0.7);
 	margin-bottom: 2%;
 	box-shadow: 0 0 2px #888888;
 }
@@ -128,9 +151,26 @@ header {
 .external-links a {
     border-radius: 5px;
     background: #428BCA;
-    padding: 7px;
+    padding: 0.7% 1.5%;
     color: white;
     text-decoration: none;
 	display: inline-block;
+	text-shadow: 1px 1px 0 #000000;
+}
+.external-links a:hover {
+	background-color: #417AA8;
 }
 
+#social {
+    text-align: center;
+	margin-bottom: 5%;
+	padding: 2%;
+	font-size: 1.2em;
+}
+#social img {
+	display: inline-block;
+	height: 1em;
+}
+#social a {
+	margin: 0 0.2em;
+}
