@@ -36,7 +36,7 @@ p {
     padding: 0;
 }
 
-h1, h2, h3 {
+h1, h2, h3, h4 {
     margin: 0;
     padding: 0;
     font-weight: lighter;
@@ -80,9 +80,16 @@ h2 a {
 }
 
 h3 {
+	font-weight: bold;
+	text-align: left;
+	padding: 1% 2% 0;
+	font-size: 1.3em;
+}
+
+h4 {
 	font-size: 1.5em;
 }
-h3 em {
+h4 em {
 	font-style: normal;
 	font-size: 1.1em;
 }
@@ -98,58 +105,60 @@ ul li {
 }
 
 header {
-	
+	padding: 3%;
 }
 
-#projects {
-
-}
+/* projects */
 
 .project {
-	padding: 2%;
-	overflow: auto;
+	padding: 1%;
+	margin: 1%;
 	background: rgba(225, 225, 225, 0.7);
-	margin: 3% 0;
 	box-shadow: 0 0 2px #888888;
 }
 
 .project img {
 	float: left;
-	width: 30%;
+	width: 15%;
 	box-shadow: 0 0 4px #444444;
 }
 @media(max-width: 750px) {
 	.project img {
 		float: none;
-		width: 50%;
+		width: 30%;
 		margin: auto;
 		display: block;
 	}
 }
 
-.project h3 {
-    margin-left: 32%;
+.project h4 {
 	color: #3366FF;
 }
 @media(max-width: 750px) {
-	.project h3 {
-		margin-left: 0;
+	.project h4 {
 		margin-top: 2%;
 	}
 }
 
 .summary {
-	margin-left: 32%;
-	padding: 2%;
+	padding: 1%;
 }
-@media(max-width: 750px) {
-	.summary {
-		margin-left: 0;
-	}
+
+.summary .date {
+	display: inline-block;
+	min-width: 200px;
+	text-align: right;
+	margin-right: 10px;
 }
 
 .external-links {
+	margin-left: 17%;
     text-align: center;
+}
+@media(max-width: 750px) {
+	.external-links {
+		margin-left: 0;
+	}
 }
 .external-links a {
     border-radius: 5px;
@@ -164,9 +173,58 @@ header {
 	background-color: #417AA8;
 }
 
+/* professional projects */
+
+#professional-projects {
+
+}
+
+#professional-projects .project h4 {
+	text-align: left;
+}
+
+/* personal projects */
+
+#personal-projects {
+	overflow: auto;
+}
+
+#personal-projects .project {
+	overflow: auto;
+	float: left;
+	width: 46%;
+	min-height: 8em;
+}
+@media(max-width: 750px) {
+	#personal-projects .project {
+		float: none;
+		width: auto;
+	}
+}
+
+#personal-projects .project h4 {
+    margin-left: 17%;
+}
+@media(max-width: 750px) {
+	#personal-projects .project h4 {
+		margin-left: 0;
+		margin-top: 2%;
+	}
+}
+
+#personal-projects .summary {
+	margin-left: 17%;
+	padding-left: 0;
+}
+@media(max-width: 750px) {
+	#personal-projects .summary {
+		margin-left: 0;
+	}
+}
+
 #social {
     text-align: center;
-	margin-bottom: 2%;
+	margin-bottom: 1%;
 	padding: 5%;
 	font-size: 1.2em;
 }
