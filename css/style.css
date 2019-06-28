@@ -155,7 +155,7 @@ header {
 .project-group {
 	display: table;
 	border-collapse:separate;
-	border-spacing: 10px 5px;
+	border-spacing: 20px 10px;
 	width: 100%;
 }
 @media(max-width: 750px) {
