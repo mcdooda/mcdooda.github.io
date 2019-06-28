@@ -116,6 +116,12 @@ header {
 	background: rgba(225, 225, 225, 0.7);
 	box-shadow: 0 0 2px #888888;
 }
+@media(max-width: 750px) {
+	.project {
+		padding: 2%;
+		margin: 3% 2%;
+	}
+}
 
 .project img {
 	float: left;
@@ -142,13 +148,28 @@ header {
 
 .summary {
 	padding: 1%;
+	overflow: auto;
 }
 
 .summary .date {
-	display: inline-block;
+	display: block;
 	min-width: 200px;
 	text-align: right;
-	margin-right: 10px;
+	margin-right: 1.5em;
+	float: left;
+	clear: left;
+	font-size: 0.9em;
+}
+
+.summary .role {
+	display: block;
+	float: left;
+	min-width: 400px;
+}
+@media(max-width: 750px) {
+	.summary .role {
+		min-width: 0;
+	}
 }
 
 .external-links {
