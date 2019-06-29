@@ -107,7 +107,7 @@ header {
 /* projects */
 
 .project {
-	margin: 1%;
+	margin: 20px;
 	background: rgba(225, 225, 225, 0.7);
 	box-shadow: 0 0 2px #888888;
 	overflow: auto;
